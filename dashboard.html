@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Portal - Dashboard</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a clean, sans-serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use a clean, modern font stack */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-teal-600">The Student Quarters</h1>
+                </div>
+                <div>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Welcome Message -->
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Welcome back, Alex!</h2>
+                <p class="text-gray-500 mt-1">Here's what's happening today.</p>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Announcements Card -->
+                <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Announcements</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="p-3 bg-teal-50 rounded-lg">
+                            <p class="font-medium text-teal-800">Water maintenance tomorrow from 10 AM to 1 PM.</p>
+                        </li>
+                        <li class="p-3 bg-yellow-50 rounded-lg">
+                            <p class="font-medium text-yellow-800">Last day to register for the annual sports event.</p>
+                        </li>
+                        <li class="p-3 bg-gray-100 rounded-lg">
+                            <p class="font-medium text-gray-700">Monthly pest control scheduled for this Friday.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Today's Menu Card -->
+                <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Today's Menu</h3>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-gray-700">Breakfast</p>
+                            <p class="text-gray-500">Poha, Jalebi, Tea/Coffee</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-700">Lunch</p>
+                            <p class="text-gray-500">Chapati, Rice, Dal Fry, Aloo Gobi, Salad</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-700">Dinner</p>
+                            <p class="text-gray-500">Chapati, Rice, Paneer Butter Masala, Raita</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Room Details Card -->
+                <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">My Room Details</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Room Number:</span>
+                            <span class="font-semibold text-gray-800">B-302</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Floor:</span>
+                            <span class="font-semibold text-gray-800">3rd Floor</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Roommate:</span>
+                            <span class="font-semibold text-gray-800">Ben Carter</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
