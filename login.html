@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostel Portal - Sign In</title>
+    <title>Hostel Portal</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for a clean, sans-serif font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Use a clean, modern font stack */
@@ -19,75 +19,152 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen flex items-center justify-center p-4 relative">
+<body class="bg-gray-50 text-gray-800 min-h-screen">
 
-    <!-- Background Image Container -->
-    <div class="absolute inset-0 z-0">
-        <img 
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2550&auto=format&fit=crop" 
-            alt="Abstract light and clean background"
-            class="w-full h-full object-cover opacity-70"
-            onerror="this.style.display='none'"
-        >
-        <div class="absolute inset-0 bg-white/20"></div> <!-- Subtle overlay -->
-    </div>
+    <!-- ================================================== -->
+    <!-- LOGIN PAGE SECTION                                 -->
+    <!-- ================================================== -->
+    <div id="login-section" class="min-h-screen flex items-center justify-center p-4 relative">
+        <!-- Background Image Container -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2550&auto=format&fit=crop" 
+                alt="Abstract light and clean background"
+                class="w-full h-full object-cover opacity-70"
+                onerror="this.style.display='none'"
+            >
+            <div class="absolute inset-0 bg-white/20"></div> <!-- Subtle overlay -->
+        </div>
 
-    <main class="w-full max-w-sm mx-auto relative z-10">
-        <!-- The main login card with a clean, minimalist style -->
-        <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <div class="p-8 md:p-10">
-                <header class="text-center mb-8">
-                    <h1 class="text-3xl font-semibold text-gray-900">
-                        Hostel Portal
-                    </h1>
-                    <p class="text-gray-500 mt-2 text-sm">Sign in to your resident account.</p>
-                </header>
-                
-                <form onsubmit="event.preventDefault(); console.log('Form submitted');">
-                    <div class="space-y-4">
-                        <!-- Student ID / Email Input Field -->
-                        <div class="relative">
-                            <input 
-                                type="email" 
-                                id="student-id" 
-                                placeholder="Student ID or Email" 
-                                class="w-full bg-white/70 border border-gray-300 rounded-lg py-3 px-4 text-gray-900 placeholder-gray-400 outline-none transition-all duration-200 hover:border-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" 
-                                required
-                            >
-                        </div>
-                        
-                        <!-- Password Input Field -->
-                        <div class="relative">
-                            <input 
-                                type="password" 
-                                id="password" 
-                                placeholder="Password" 
-                                class="w-full bg-white/70 border border-gray-300 rounded-lg py-3 px-4 text-gray-900 placeholder-gray-400 outline-none transition-all duration-200 hover:border-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" 
-                                required
-                            >
-                        </div>
-                    </div>
+        <main class="w-full max-w-sm mx-auto relative z-10">
+            <!-- The main login card -->
+            <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div class="p-8 md:p-10">
+                    <header class="text-center mb-8">
+                        <h1 class="text-3xl font-semibold text-gray-900">Hostel Portal</h1>
+                        <p class="text-gray-500 mt-2 text-sm">Sign in to your resident account.</p>
+                    </header>
                     
-                    <!-- Submit Button -->
-                    <div class="mt-8">
-                        <button type="submit" class="w-full bg-teal-600 text-white font-semibold py-3 rounded-lg hover:bg-teal-700 transition-all duration-200 flex items-center justify-center hover:-translate-y-0.5">
-                            <span>Log In</span>
-                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </button>
-                    </div>
-                </form>
+                    <form id="login-form">
+                        <div class="space-y-4">
+                            <input type="email" placeholder="Student ID or Email" class="w-full bg-white/70 border border-gray-300 rounded-lg py-3 px-4 text-gray-900 placeholder-gray-400 outline-none transition-all duration-200 hover:border-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                            <input type="password" placeholder="Password" class="w-full bg-white/70 border border-gray-300 rounded-lg py-3 px-4 text-gray-900 placeholder-gray-400 outline-none transition-all duration-200 hover:border-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        <div class="mt-8">
+                            <button type="submit" class="w-full bg-teal-600 text-white font-semibold py-3 rounded-lg hover:bg-teal-700 transition-all duration-200 flex items-center justify-center hover:-translate-y-0.5">
+                                <span>Log In</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </form>
 
-                <div class="text-center mt-6">
-                    <a href="#" class="text-sm text-teal-600 hover:underline">Forgot your password?</a>
+                    <div class="text-center mt-6">
+                        <a href="#" class="text-sm text-teal-600 hover:underline">Forgot your password?</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Footer text -->
-        <footer class="text-center mt-8 text-gray-600 text-xs">
-            <p>Copyright &copy; 2025 The Student Quarters. All rights reserved.</p>
-        </footer>
-    </main>
+            <footer class="text-center mt-8 text-gray-600 text-xs">
+                <p>Copyright &copy; 2025 The Student Quarters. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- DASHBOARD PAGE SECTION                             -->
+    <!-- ================================================== -->
+    <div id="dashboard-section" class="hidden"> <!-- Initially hidden -->
+        <!-- Header Navigation -->
+        <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-teal-600">The Student Quarters</h1>
+                    </div>
+                    <div>
+                        <button id="logout-button" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Welcome Message -->
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Welcome back,YASHRAJ</h2>
+                    <p class="text-gray-500 mt-1">Here's what's happening today.</p>
+                </div>
+
+                <!-- Dashboard Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Announcements Card -->
+                    <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Announcements</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="p-3 bg-teal-50 rounded-lg"><p class="font-medium text-teal-800">Water maintenance tomorrow from 10 AM to 1 PM.</p></li>
+                            <li class="p-3 bg-yellow-50 rounded-lg"><p class="font-medium text-yellow-800">Last day to register for the annual sports event.</p></li>
+                            <li class="p-3 bg-gray-100 rounded-lg"><p class="font-medium text-gray-700">Monthly pest control scheduled for this Friday.</p></li>
+                        </ul>
+                    </div>
+                    <!-- Today's Menu Card -->
+                    <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Today's Menu</h3>
+                        <div class="space-y-4 text-sm">
+                            <div><p class="font-semibold text-gray-700">Breakfast</p><p class="text-gray-500">Poha, Jalebi, Tea/Coffee</p></div>
+                            <div><p class="font-semibold text-gray-700">Lunch</p><p class="text-gray-500">Chapati, Rice, Dal Fry, Aloo Gobi, Salad</p></div>
+                            <div><p class="font-semibold text-gray-700">Dinner</p><p class="text-gray-500">Chapati, Rice, Paneer Butter Masala, Raita</p></div>
+                        </div>
+                    </div>
+                    <!-- My Room Details Card -->
+                    <div class="bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">My Room Details</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-500">Room Number:</span><span class="font-semibold text-gray-800">409</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">Floor:</span><span class="font-semibold text-gray-800">4th Floor</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">Roommate:</span><span class="font-semibold text-gray-800">Samrat Gaware<br>Rohit Dhokchaule<br>Gaurang Karhale</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- JAVASCRIPT LOGIC TO SWITCH BETWEEN PAGES           -->
+    <!-- ================================================== -->
+    <script>
+        // Get references to the page sections and buttons
+        const loginSection = document.getElementById('login-section');
+        const dashboardSection = document.getElementById('dashboard-section');
+        const loginForm = document.getElementById('login-form');
+        const logoutButton = document.getElementById('logout-button');
+
+        // --- Event Listeners ---
+
+        // Listen for the login form submission
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the form from actually submitting
+            showDashboard();
+        });
+
+        // Listen for clicks on the logout button
+        logoutButton.addEventListener('click', function() {
+            showLogin();
+        });
+
+        // --- Functions to switch views ---
+
+        function showDashboard() {
+            loginSection.classList.add('hidden'); // Hide login page
+            dashboardSection.classList.remove('hidden'); // Show dashboard
+        }
+
+        function showLogin() {
+            dashboardSection.classList.add('hidden'); // Hide dashboard
+            loginSection.classList.remove('hidden'); // Show login page
+        }
+    </script>
 
 </body>
 </html>
