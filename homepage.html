@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Student Quarters - Welcome</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a clean, sans-serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use a clean, modern font stack */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Keyframes for the popup animation */
+        @keyframes popup {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Class to hide the element before animation */
+        .animate-popup {
+            opacity: 0;
+        }
+
+        /* Class to apply the animation when the element is visible */
+        .popup-visible {
+            animation: popup 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-teal-600">The Student Quarters</h1>
+                </div>
+                <nav>
+                    <!-- Link this to your portal page -->
+                    <a href="#" class="bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-700 transition-all duration-200">
+                        Resident Login
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center justify-center text-white">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2550&auto=format&fit=crop" alt="Comfortable common room in a hostel" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay for text readability -->
+            </div>
+            <div class="relative z-10 text-center p-4">
+                <h2 class="text-4xl md:text-6xl font-bold">Your Home Away From Home</h2>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Comfortable, secure, and vibrant living spaces designed for students.</p>
+            </div>
+        </section>
+
+        <!-- Features Section with Rollover and Popup Effect -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-gray-900">Why Choose Us?</h3>
+                    <p class="mt-2 text-gray-500">Everything you need for a great student life.</p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Feature Card 1: High-Speed Wi-Fi -->
+                    <div class="feature-card animate-popup group bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="relative w-full h-40 mb-5 rounded-xl overflow-hidden">
+                            <div class="absolute inset-0 bg-teal-100 text-teal-600 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15 15 0 0121.212 0"></path></svg>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" alt="Students using Wi-Fi" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        </div>
+                        <h4 class="text-lg font-semibold">High-Speed Wi-Fi</h4>
+                        <p class="mt-2 text-sm text-gray-500">Stay connected with unlimited, high-speed internet for study and entertainment.</p>
+                    </div>
+
+                    <!-- Feature Card 2: Quality Food -->
+                    <div class="feature-card animate-popup group bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="relative w-full h-40 mb-5 rounded-xl overflow-hidden">
+                            <div class="absolute inset-0 bg-teal-100 text-teal-600 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=2787&auto=format&fit=crop" alt="Healthy and delicious food" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        </div>
+                        <h4 class="text-lg font-semibold">Quality Food</h4>
+                        <p class="mt-2 text-sm text-gray-500">Enjoy delicious and hygienic meals served daily in our clean dining hall.</p>
+                    </div>
+
+                    <!-- Feature Card 3: 24/7 Security -->
+                    <div class="feature-card animate-popup group bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="relative w-full h-40 mb-5 rounded-xl overflow-hidden">
+                            <div class="absolute inset-0 bg-teal-100 text-teal-600 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=2673&auto=format&fit=crop" alt="Secure hostel entrance" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        </div>
+                        <h4 class="text-lg font-semibold">24/7 Security</h4>
+                        <p class="mt-2 text-sm text-gray-500">Your safety is our priority, with round-the-clock security and CCTV surveillance.</p>
+                    </div>
+
+                    <!-- Feature Card 4: Laundry Service -->
+                    <div class="feature-card animate-popup group bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="relative w-full h-40 mb-5 rounded-xl overflow-hidden">
+                            <div class="absolute inset-0 bg-teal-100 text-teal-600 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?q=80&w=2670&auto=format&fit=crop" alt="Modern laundry room" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        </div>
+                        <h4 class="text-lg font-semibold">Laundry Service</h4>
+                        <p class="mt-2 text-sm text-gray-500">On-site laundry facilities to make your daily chores easier and convenient.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 The Student Quarters. All rights reserved.</p>
+            <p class="mt-2 text-sm text-gray-400">123 University Road, Cityville</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Popup Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.feature-card');
+
+            // Set up the Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // If the element is in the viewport, add the 'popup-visible' class
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('popup-visible');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger animation when 10% of the card is visible
+            });
+
+            // Observe each card and add a staggered delay
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 100}ms`;
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
